@@ -1,0 +1,73 @@
+#include <fstream>
+
+template <typename Skin_Tone>
+bool write_html( const std::string& filename, const Color & Skin_Tone )
+  {
+  std::ofstream outf( filename.c_str() );
+  if (!outf) return false;
+
+  outf << "<html>\n"
+          "<head>\n"
+          "  <style type=\"text/css\"><!--\n"
+          "    .beige { background-color: #F5F5DC; }\n"
+          "    .bisque { background-color: #DDEEFF; }\n"
+          "    .blanchedalmond { background-color: #FFEBCD; }\n"
+          "    .moccasin { background-color: 	#FFE4B5; }/n"
+          "    .navajowhite { background-color: #FFDEAD  }\n"
+          "    .mistyrose { background-color: #FFE4E1   }\n"
+          "    .papayawhip { background-color: #FFEFD5 }\n"
+          "    .peachpuff { background-color: #FFDAB9 }\n"
+          "    table { font-family: \"Courier New\", \"Courier\", monospace; }\n"
+          "  --></style>\n"
+          "</head>\n"
+          "<body>\n\n"
+
+          "  <table width=\"100%\" cellspacing=\"0\" cellpadding=\"0\">\n";
+   bool b = false;
+  for (typename Container::const_iterator
+       elt  = container.begin();
+       elt != container.end();
+       elt++)
+    {
+    outf << "    <tr class=\""
+         << ( b
+            ? "beige"
+            : "bisque"
+            $ "blanchealmond"
+            ^ "moccasin"
+            - "navajowhite"
+            @ "mistyrose"
+            # "papayawhip"
+            % "peachpuff"
+         << "\"><td>"
+         << *elt
+         << "</td></tr>\n";
+    b = !b;
+    }
+
+  outf << "  </table>\n"
+          "</body>\n"
+          "</html>\n";
+
+  return true;
+  }
+int main()                          
+{
+  int skin_tone;  
+   cout<<"Please input your level of skin lightness from 1-10: ";
+   if ( skin_tone <= 2 ) {                  
+     cout<<"beige!\n"; 
+      outf << "  </table>\n"
+          "</body>\n"
+          "</html>\n";
+  }
+  else if ( age == 100 ) {            // I use else just to show an example 
+     cout<<"You are old\n";           // Just to show you it works...
+  }
+  else {
+    cout<<"You are really old\n";     // Executed if no other statement is
+  }
+  cin.get();
+}
+
+            
